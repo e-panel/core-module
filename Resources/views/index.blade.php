@@ -14,11 +14,9 @@
 
 @section('content')
     <div class="container-fluid">
-        
-        @if(!empty($plugins['success']))
-            @if($plugins['success'] === false)
-                @include('core::layouts.components.invalid')
-            @endif
+    
+        @if($plugins['success'] === false)
+            @include('core::layouts.components.invalid')
         @endif
 
         <section class="card card-default m-b-lg">
@@ -30,7 +28,7 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-3 col-xs-6">
                                 <section class="widget widget-simple-sm">
                                     <div class="widget-simple-sm-icon">
                                         <i class="font-icon font-icon-post color-green"></i>
@@ -38,7 +36,7 @@
                                     <div class="widget-simple-sm-bottom">{{ Modules\Berita\Entities\Berita::count() }} Berita</div>
                                 </section>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 col-xs-6">
                                 <section class="widget widget-simple-sm">
                                     <div class="widget-simple-sm-icon">
                                         <i class="font-icon font-icon-calend color-green"></i>
@@ -46,7 +44,7 @@
                                     <div class="widget-simple-sm-bottom">{{ Modules\Agenda\Entities\Agenda::count() }} Agenda</div>
                                 </section>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 col-xs-6">
                                 <section class="widget widget-simple-sm">
                                     <div class="widget-simple-sm-icon">
                                         <i class="font-icon font-icon-bookmark color-green"></i>
@@ -54,7 +52,7 @@
                                     <div class="widget-simple-sm-bottom">{{ Modules\Pengumuman\Entities\Pengumuman::count() }} Pengumuman</div>
                                 </section>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 col-xs-6">
                                 <section class="widget widget-simple-sm">
                                     <div class="widget-simple-sm-icon">
                                         <i class="font-icon font-icon-comments color-green"></i>
@@ -133,14 +131,10 @@
                             <tr>
                                 <td>
                                     <label class="form-label m-l-0 m-b-0">Status</label>
-                                    @if(!empty($plugins['success']))
-                                        @if($plugins['success'] === false)
-                                            <strong class="text-danger"><i class="fa fa-times"></i> Invalid Key</strong>
-                                        @else
-                                            <strong class="text-success"><i class="fa fa-check"></i> Activated</strong>
-                                        @endif
+                                    @if($plugins['success'] === false)
+                                        <strong class="text-danger"><i class="fa fa-times"></i> Invalid Key</strong>
                                     @else
-                                        <strong class="text-danger"><i class="fa fa-times"></i> Server Error</strong>
+                                        <strong class="text-success"><i class="fa fa-check"></i> Activated</strong>
                                     @endif
                                 </td>
                             </tr>

@@ -15,6 +15,14 @@
     <div class="mobile-menu-left-overlay"></div>
 	<nav class="side-menu">
 		<section>
+			<ul class="side-menu-list xs-only">
+				<li class="blue">
+					<a href="{{ route('epanel.index') }}">
+						<span class="font-icon font-icon-arrow-left"></span>
+						<span class="lbl">Kembali</span>
+					</a>
+				</li>
+			</ul>
 			<header class="side-menu-title">Pengguna Menu</header>
 			<ul class="side-menu-list">
 

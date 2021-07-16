@@ -15,6 +15,14 @@
     <div class="mobile-menu-left-overlay"></div>
 	<nav class="side-menu">
 		<section>
+			<ul class="side-menu-list xs-only">
+				<li class="blue">
+					<a href="{{ route('epanel.index') }}">
+						<span class="font-icon font-icon-arrow-left"></span>
+						<span class="lbl">Kembali</span>
+					</a>
+				</li>
+			</ul>
 
 			@if(empty($admin->role) || (!empty($permissions) && in_array('Pegawai', $permissions)))
 				<header class="side-menu-title">Kepegawaian</header>
@@ -83,85 +91,6 @@
 					@endif
 				</ul>
 			@endif
-
-			@if(Module::has('JDIH'))
-				<header class="side-menu-title">JDIH</header>
-				<ul class="side-menu-list">
-					<li class="blue @yield('mJDKategori')">
-						<a href="{{ route('epanel.jdih.kategori.index') }}">
-							<span class="font-icon font-icon-folder"></span>
-							<span class="lbl">Kategori</span>
-						</a>
-					</li>
-					<li class="blue @yield('mJDTahun')">
-						<a href="{{ route('epanel.jdih.tahun.index') }}">
-							<span class="font-icon font-icon-calend"></span>
-							<span class="lbl">Tahun</span>
-						</a>
-					</li>
-					<li class="blue @yield('mJDStatus')">
-						<a href="{{ route('epanel.jdih.status.index') }}">
-							<span class="font-icon font-icon-revers"></span>
-							<span class="lbl">Status</span>
-						</a>
-					</li>
-					<li class="blue @yield('mJDPeraturan')">
-						<a href="{{ route('epanel.jdih.peraturan.index') }}">
-							<span class="font-icon font-icon-doc"></span>
-							<span class="lbl">Peraturan</span>
-						</a>
-					</li>
-				</ul>
-			@endif
-
-			@if(Module::has('JDIH'))
-				<header class="side-menu-title">JDIH</header>
-				<ul class="side-menu-list">
-					<li class="blue @yield('mJDKategori')">
-						<a href="{{ route('epanel.jdih.kategori.index') }}">
-							<span class="font-icon font-icon-folder"></span>
-							<span class="lbl">Kategori</span>
-						</a>
-					</li>
-					<li class="blue @yield('mJDTahun')">
-						<a href="{{ route('epanel.jdih.tahun.index') }}">
-							<span class="font-icon font-icon-calend"></span>
-							<span class="lbl">Tahun</span>
-						</a>
-					</li>
-					<li class="blue @yield('mJDStatus')">
-						<a href="{{ route('epanel.jdih.status.index') }}">
-							<span class="font-icon font-icon-revers"></span>
-							<span class="lbl">Status</span>
-						</a>
-					</li>
-					<li class="blue @yield('mJDPeraturan')">
-						<a href="{{ route('epanel.jdih.peraturan.index') }}">
-							<span class="font-icon font-icon-doc"></span>
-							<span class="lbl">Peraturan</span>
-						</a>
-					</li>
-				</ul>
-			@endif
-
-			@if(Module::has('Tourism'))
-				<header class="side-menu-title">Tourism</header>
-				<ul class="side-menu-list">
-					<li class="blue @yield('mTrEvents')">
-						<a href="{{ route('epanel.tourism.events.index') }}">
-							<span class="font-icon font-icon-folder"></span>
-							<span class="lbl">Events</span>
-						</a>
-					</li>
-					<li class="blue @yield('mTrPlaces')">
-						<a href="{{ route('epanel.tourism.categories.index') }}">
-							<span class="font-icon font-icon-calend"></span>
-							<span class="lbl">Places</span>
-						</a>
-					</li>
-				</ul>
-			@endif
-
 		</section>
 	</nav>
 @stop

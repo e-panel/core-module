@@ -108,6 +108,49 @@
         .side-menu-list .font-icon {
             top:10px;
         }
+        .page-content {
+            overflow-y: auto;
+            padding-bottom: 200px;
+        }
+        .xs-only {
+            display: none;
+        }
+        @media (max-width: 640px) {
+            .xs-only {
+                display: block;
+            }
+            .sembunyi {
+                display: none!important;
+            }
+            .site-header .hamburger {
+                margin: 0;
+            }
+            .horizontal-navigation .main-nav .nav-item {
+                background: #fff;
+                border-right: 1px solid #f3f3f3;
+            }
+            .horizontal-navigation .page-content {
+                padding: 50px 0 0;
+            }
+            .page-content .container-fluid {
+                padding: 0;
+            }
+            .box-typical, .box-typical .box-typical-header {
+                padding-top: 10px;
+            }
+            .box-typical .box-typical-header .tbl-cell.tbl-cell-title h3 {
+                font-size: 18px;
+                line-height: 12px;
+            }
+            .box-typical .box-typical-header .tbl-cell.tbl-cell-title h3 b {
+                line-height: 25px;
+            }
+            .side-menu {
+                top: 0;
+                padding: 75px 0 0;
+                width: 200px;
+            }
+        }
     </style>
 
 </head>
@@ -126,7 +169,7 @@
 		@yield('content')
 	</div>
 
-    <div class="statusbar">
+    <div class="statusbar sembunyi">
         <div class="statusbar-item title">
             <strong>E-Panel CMS v{{ config('core.version') }} by Enter(wind)</strong>
         </div> 

@@ -21,7 +21,7 @@
                 @if(auth()->check())
 
                 <div class="site-header-shown">
-                    <a class="btn btn-nav btn-inline btn-default-outline" href="{{ route('frontend.index') }}" target="_blank">
+                    <a class="btn btn-nav btn-inline btn-default-outline sembunyi" href="{{ route('frontend.index') }}" target="_blank">
                         <i class="fa fa-globe"></i>
                         View Website
                     </a>
@@ -36,16 +36,18 @@
                                     <img src="{!! Avatar::create(auth()->user()->nama)->toBase64() !!}">
                                 @endif
                             @endif
-                            {!! auth()->user()->nama !!}!
-                            <span>
-                                <i class="fa fa-user"></i>
-                                {{ auth()->user()->username }}
-                            </span>
+                            <div class="sembunyi" style="float:left">
+                                {!! auth()->user()->nama !!}!
+                                <span>
+                                    <i class="fa fa-user"></i>
+                                    {{ auth()->user()->username }}
+                                </span>
+                            </div>
                         </button>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
                             <a class="dropdown-item" href="{{ route('epanel.settings.profile') }}">
-                            	<span class="font-icon glyphicon glyphicon-user"></span>
-                            	Profil
+                                <span class="font-icon glyphicon glyphicon-user"></span>
+                                Profil
                             </a>
                             <a class="dropdown-item" href="{{ route('epanel.settings.password') }}">
                                 <span class="font-icon fa fa-unlock"></span>
@@ -53,8 +55,8 @@
                             </a>
                             @if(auth()->user()->level == 1)
                             <a class="dropdown-item" href="{{ route('epanel.settings.setting') }}?type=general">
-                            	<span class="font-icon glyphicon glyphicon-cog"></span>
-                            	Pengaturan
+                                <span class="font-icon glyphicon glyphicon-cog"></span>
+                                Pengaturan
                             </a>
                             @endif
                             <div class="dropdown-divider"></div>
@@ -66,13 +68,13 @@
                                 </a>
                             @else
                                 <a class="dropdown-item" href="{{ route('epanel.logout') }}">
-                                	<span class="font-icon fa fa-times"></span>
-                                	Keluar
+                                    <span class="font-icon fa fa-times"></span>
+                                    Keluar
                                 </a>
                             @endif
                         </div>
                     </div>
-                    <button type="button" class="burger-right">
+                    <button type="button" class="burger-right sembunyi">
                         <i class="font-icon-menu-addl"></i>
                     </button>
                 </div>
